@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TechStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">TechStore</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <h2>All Products</h2>
+                
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="smartphones">Smartphones</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                    
+                    <div class="wishlist-toggle">
+                        <button id="showWishlist" onclick="showWishlistItems()">
+                            <i class="fas fa-heart"></i> Show Wishlist
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="productGrid">
+                    <div class="product-card" data-id="1" data-category="smartphones">
+                        <img src="https://via.placeholder.com/300x200/4A90E2/ffffff?text=Smartphone" alt="Smartphone">
+                        <div class="product-info">
+                            <h4>Premium Smartphone</h4>
+                            <p class="description">Latest flagship with advanced camera</p>
+                            <p class="price">$699.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(1)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(1, 'Premium Smartphone', 699.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-id="2" data-category="laptops">
+                        <img src="https://via.placeholder.com/300x200/7ED321/ffffff?text=Laptop" alt="Laptop">
+                        <div class="product-info">
+                            <h4>Gaming Laptop</h4>
+                            <p class="description">High-performance gaming machine</p>
+                            <p class="price">$1,299.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(2)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(2, 'Gaming Laptop', 1299.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-id="3" data-category="accessories">
+                        <img src="https://via.placeholder.com/300x200/F5A623/ffffff?text=Headphones" alt="Headphones">
+                        <div class="product-info">
+                            <h4>Wireless Headphones</h4>
+                            <p class="description">Premium audio experience</p>
+                            <p class="price">$199.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(3)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(3, 'Wireless Headphones', 199.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-id="4" data-category="accessories">
+                        <img src="https://via.placeholder.com/300x200/BD10E0/ffffff?text=Smartwatch" alt="Smartwatch">
+                        <div class="product-info">
+                            <h4>Smart Watch</h4>
+                            <p class="description">Fitness tracking and notifications</p>
+                            <p class="price">$299.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(4)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(4, 'Smart Watch', 299.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-id="5" data-category="laptops">
+                        <img src="https://via.placeholder.com/300x200/50E3C2/ffffff?text=Ultrabook" alt="Ultrabook">
+                        <div class="product-info">
+                            <h4>Ultra-thin Laptop</h4>
+                            <p class="description">Lightweight and portable</p>
+                            <p class="price">$899.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(5)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(5, 'Ultra-thin Laptop', 899.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-id="6" data-category="smartphones">
+                        <img src="https://via.placeholder.com/300x200/B8E986/ffffff?text=Budget+Phone" alt="Budget Phone">
+                        <div class="product-info">
+                            <h4>Budget Smartphone</h4>
+                            <p class="description">Affordable with great features</p>
+                            <p class="price">$299.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(6)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(6, 'Budget Smartphone', 299.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
