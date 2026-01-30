@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Premium Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">TechStore</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to TechStore</h2>
+                <p>Discover the latest in premium electronics and gadgets</p>
+                <a href="products.html" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h3>Featured Products</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-id="1">
+                        <img src="https://via.placeholder.com/300x200/4A90E2/ffffff?text=Smartphone" alt="Smartphone">
+                        <div class="product-info">
+                            <h4>Premium Smartphone</h4>
+                            <p class="price">$699.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(1)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(1, 'Premium Smartphone', 699.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-id="2">
+                        <img src="https://via.placeholder.com/300x200/7ED321/ffffff?text=Laptop" alt="Laptop">
+                        <div class="product-info">
+                            <h4>Gaming Laptop</h4>
+                            <p class="price">$1,299.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(2)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(2, 'Gaming Laptop', 1299.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-id="3">
+                        <img src="https://via.placeholder.com/300x200/F5A623/ffffff?text=Headphones" alt="Headphones">
+                        <div class="product-info">
+                            <h4>Wireless Headphones</h4>
+                            <p class="price">$199.99</p>
+                            <div class="product-actions">
+                                <button class="wishlist-btn" onclick="toggleWishlist(3)">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="cart-btn" onclick="addToCart(3, 'Wireless Headphones', 199.99)">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
