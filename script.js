@@ -369,3 +369,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+document.addEventListener('DOMContentLoaded', function () {
+    initializeContactForm();
+});
+
